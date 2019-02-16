@@ -1,0 +1,6 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dt7-6k-pWa"; Note = "標籤，用來顯示姓名"; */
+"dt7-6k-pWa.text" = "姓名";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kaj-iP-EhU"; Note = "存檔按鈕"; */
+"kaj-iP-EhU.normalTitle" = "存檔";

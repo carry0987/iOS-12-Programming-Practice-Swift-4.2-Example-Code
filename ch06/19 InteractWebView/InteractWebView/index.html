@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            .font {
+                font-size: 36pt
+            }
+        </style>
+        <script language="javascript">
+            function bnClick() {
+                // 取得使用者在文字框輸入的資料
+                var text = document.getElementById("text").value;
+                // Test 即 WKWebKit 在初始化時註冊的名字
+                window.webkit.messageHandlers.Test.postMessage(text)
+            }
+        
+        // 這個函數在 ViewController.swift 中呼叫
+        function setLabelTitle(title) {
+            // alert 必須在 ViewController.swift 中攔截並轉成 UIAlertController
+            alert(title);
+            var label = document.getElementById("label");
+            label.innerHTML = title;
+        }
+        </script>
+    </head>
+    
+    <body>
+        <!-- 文字框 -->
+        <div><input id="text" type="text" class="font"/></div><p/>
+        <!-- 按鈕 -->
+        <div><input type="button" class="font" value="Button" onClick="bnClick()"/></div><p/>
+        <!-- 標籤 -->
+        <div id="label" class="font"></div>
+    </body>
+</html>
+
